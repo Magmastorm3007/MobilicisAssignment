@@ -3,8 +3,8 @@ import Navbar from 'react-bootstrap/Navbar';
 
 function Nav() {
   return (
-    <Navbar bg="dark" variant="dark">
-      <Container>
+    <Navbar bg="dark" variant="dark" >
+      <Container fluid>
         <Navbar.Brand href="#home" >Assignment</Navbar.Brand>
         <Navbar.Toggle />
         <Navbar.Collapse className="justify-content-end">
