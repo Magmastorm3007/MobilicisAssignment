@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Container, Row, Col, Button, Table } from 'react-bootstrap';
-
+import BounceLoader from 'react-spinners/BounceLoader'
+import './filter.css'
 function App() {
   const [data, setData] = useState([]);
+
+  const [loading,setLoading]=useState(true)
   const [filteredData, setFilteredData] = useState([]);
 
  const[btn,Setbtn]=useState('')
@@ -12,6 +15,7 @@ function App() {
     fetch('https://sample-data.onrender.com/api/data')
       .then((response) => response.json())
       .then((json) => {
+        setLoading(false)
         setData(json);
         setFilteredData(json);
       });
@@ -60,7 +64,7 @@ function App() {
           return {
             city: city,
             count: cityStats[city].count,
-            averageIncome: cityStats[city].totalIncome / cityStats[city].count
+            averageIncome: (cityStats[city].totalIncome / cityStats[city].count)+'$'
           }
         });
         cityStatsArray.sort((a, b) => b.count - a.count);
@@ -75,7 +79,14 @@ function App() {
   };
 
   return (
+
     <Container fluid>
+       {
+        loading?<div class="text-center"  >
+        <div className="spin" >
+<BounceLoader/>
+        </div>
+      </div>:
       <Row>
         <Col md={1} className="bg-light">
           <Button variant="light" block value="q1" onClick={handleButtonClick}>
@@ -133,7 +144,7 @@ function App() {
             </tbody>
           </Table>
         </Col>
-      </Row>
+      </Row>}
     </Container>
   );
 }
