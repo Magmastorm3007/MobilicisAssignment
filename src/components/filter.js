@@ -31,7 +31,7 @@ function App() {
         newFilteredData = data.filter(item => {
           const a = parseFloat(item.income.slice(1));
           const b = parseFloat('$5.00'.slice(1));
-          const isBMV = item.car.includes('BMV')
+        
          return (item.car === 'BMW' || item.car === 'Mercedes-Benz')&&(a<b)
         });
         break;
