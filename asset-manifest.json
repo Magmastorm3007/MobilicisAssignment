@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/MobilicisAssignment/static/css/main.48c72e6d.css",
-    "main.js": "/MobilicisAssignment/static/js/main.a2272ad2.js",
+    "main.js": "/MobilicisAssignment/static/js/main.c4de4889.js",
     "static/js/787.3d4e0f4f.chunk.js": "/MobilicisAssignment/static/js/787.3d4e0f4f.chunk.js",
     "index.html": "/MobilicisAssignment/index.html",
     "main.48c72e6d.css.map": "/MobilicisAssignment/static/css/main.48c72e6d.css.map",
-    "main.a2272ad2.js.map": "/MobilicisAssignment/static/js/main.a2272ad2.js.map",
+    "main.c4de4889.js.map": "/MobilicisAssignment/static/js/main.c4de4889.js.map",
     "787.3d4e0f4f.chunk.js.map": "/MobilicisAssignment/static/js/787.3d4e0f4f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.48c72e6d.css",
-    "static/js/main.a2272ad2.js"
+    "static/js/main.c4de4889.js"
   ]
 }
